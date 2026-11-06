@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#2563eb">
-<meta name="description" content="ระบบค้นหาตารางเรียนออนไลน์ โรงเรียนเมืองพลพิทยาคม เลือก ม.1–ม.6 ค้นหาตารางเรียนจริง พร้อมซูมและพิมพ์">
+<meta name="description" content="ระบบค้นหาตารางเรียนออนไลน์ โรงเรียนเมืองพลพิทยาคม เลือก ม.1–ม.6 ">
 <title>ระบบค้นหาตารางเรียนออนไลน์ | โรงเรียนเมืองพลพิทยาคม</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,12 +34,12 @@
  <div class="wrap head-inner">
   <img class="school-logo" id="schoolLogo" alt="โลโก้โรงเรียนเมืองพลพิทยาคม" src="https://cdn.jsdelivr.net/gh/vichakarn-creator/logo/logo.png" onerror="this.hidden=true;document.getElementById('fallbackLogo').style.display='flex'">
   <span class="logo-fallback" id="fallbackLogo" aria-hidden="true">MPK</span>
-  <div class="brandtext"><div class="school-name">โรงเรียนเมืองพลพิทยาคม</div><div class="app-name">ระบบค้นหาตารางเรียนออนไลน์</div></div>
+  <div class="brandtext"><div class="school-name">โรงเรียนเมืองพลพิทยาคม</div><div class="app-name">ระบบค้นหาตารางเรียน</div></div>
   <nav class="navigation" aria-label="เมนูหลัก"><a class="navlink active" href="#home" id="homeNav">หน้าแรก</a><a class="navlink" href="#quick-search" id="searchNav">ค้นหาตารางเรียน</a><span class="term-chip" id="topTerm">ภาคเรียนที่ 2/2569</span></nav>
  </div>
 </header>
 <main class="wrap">
- <section class="hero" aria-labelledby="heroTitle"><div class="hero-copy"><div class="eyebrow">MPK • ONLINE TIMETABLE</div><h1 id="heroTitle">ค้นหาตารางเรียน ง่ายในไม่กี่คลิก</h1><p>โรงเรียนเมืองพลพิทยาคม · องค์การบริหารส่วนจังหวัดขอนแก่น</p><span class="document-chip" id="docTerm">ภาคเรียนที่ 2 ปีการศึกษา 2569</span></div></section>
+ <section class="hero" aria-labelledby="heroTitle"><div class="hero-copy"><div class="eyebrow">MPK • ONLINE TIMETABLE</div><h1 id="heroTitle">ค้นหาตารางเรียน ทุกระดับชั้น</h1><p>โรงเรียนเมืองพลพิทยาคม · องค์การบริหารส่วนจังหวัดขอนแก่น</p><span class="document-chip" id="docTerm">ภาคเรียนที่ 2 ปีการศึกษา 2569</span></div></section>
  <section aria-label="ภาพรวมข้อมูล"><div class="section-heading"><div><h2>ภาพรวมตารางเรียน</h2><p>ข้อมูลอ้างอิงจากเอกสารที่โรงเรียนจัดเตรียม</p></div></div>
   <div class="stats-grid">
    <article class="stat-card"><div class="stat-icon" aria-hidden="true">▤</div><div class="stat-label">ระดับชั้นที่มีข้อมูล</div><div class="stat-value" id="kpiLevels">—</div><div class="stat-sub">มัธยมศึกษาปีที่ 1–6</div></article>
@@ -52,7 +52,7 @@
   <form class="search-card" id="searchForm" novalidate>
    <div class="search-head"><span class="search-badge" aria-hidden="true">⌕</span><div><h3 id="searchTitle">ค้นหาตารางเรียนของคุณ</h3><p>Student Timetable Quick Search</p></div></div>
    <div class="search-fields"><div class="field"><label for="gradeSelect">เลือกระดับชั้น</label><select id="gradeSelect" required><option value="">— เลือกระดับชั้น —</option></select></div><div class="field"><label for="roomSelect">เลือกห้องเรียน</label><select id="roomSelect" required disabled><option value="">— เลือกระดับชั้นก่อน —</option></select></div><button class="btn btn-primary" id="searchButton" type="submit">⌕ ค้นหาตารางเรียน</button><button class="btn btn-outline" id="clearButton" type="button">ล้างการค้นหา</button></div>
-   <p class="search-help" id="searchHelp" role="status" aria-live="polite">เลือกระดับชั้นเพื่อแสดงห้องเรียนที่มีข้อมูลจริงเท่านั้น</p>
+   <p class="search-help" id="searchHelp" role="status" aria-live="polite">เลือกระดับชั้นเพื่อแสดงห้องเรียน</p>
   </form>
  </section>
  <section class="viewer-section" id="viewerSection" aria-labelledby="viewerTitle" hidden>
@@ -64,7 +64,7 @@
  </section>
  <section class="catalog-wrap" id="browseSection" aria-labelledby="catalogTitle"><div class="section-heading"><div><h2 id="catalogTitle">เลือกดูตารางเรียนทุกห้อง</h2><p>รายการห้องเรียนสร้างจากภาพต้นฉบับ ไม่เพิ่มห้องสมมติ</p></div></div>
   <div class="catalog-panel"><div class="catalog-toolbar"><div class="chips" id="gradeChips" aria-label="กรองตามระดับชั้น"></div><label for="catalogFilter" style="display:block"><span class="hidden">ค้นหาชื่อห้อง</span><input id="catalogFilter" class="catalog-filter" type="search" placeholder="⌕ พิมพ์ห้อง เช่น ม.3/5" autocomplete="off"></label></div><div class="catalog-meta" id="catalogMeta" role="status"></div><div class="class-grid" id="classGrid"></div><div class="empty hidden" id="catalogEmpty"><strong>ยังไม่มีข้อมูลตารางเรียนของห้องนี้</strong><p>ลองเลือกระดับชั้นหรือค้นหาห้องอื่น</p></div></div>
-  <div class="notice"><span aria-hidden="true">ⓘ</span><div>ระบบแสดงภาพตารางเรียนจากเอกสารจริง การค้นหาชื่อวิชาและครูยังไม่เปิดใช้ เพราะต้นฉบับเป็นภาพและยังไม่มีข้อมูลข้อความที่ตรวจสอบความถูกต้องครบถ้วน</div></div>
+  <div class="notice"><span aria-hidden="true">ⓘ</span><div>ระบบแสดงภาพตารางเรียนจากเอกสารจริง น</div></div>
  </section>
 </main>
 <footer class="footer"><div class="wrap footer-inner"><div>© โรงเรียนเมืองพลพิทยาคม · องค์การบริหารส่วนจังหวัดขอนแก่น</div><div>ข้อมูลจากไฟล์ตารางเรียนที่นำเข้า · <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/drive/folders/1oqqqJIYNKZh8Ypk2VH-eQhiO04zRYBaR?usp=sharing">โฟลเดอร์ต้นฉบับ Google Drive</a></div></div></footer>
